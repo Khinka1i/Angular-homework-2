@@ -1,0 +1,47 @@
+/* src/app/student-list/student-list.component.css */
+body{
+    color: purple;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin: auto;
+
+}
+
+#shuffle{
+    width: 40%;
+    margin: auto;
+    display: flex;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+}
+
+table {
+    width: 40%; /* Full width */
+    border-collapse: collapse; /* Merge borders */
+    margin: 20px 0; /* Margin for spacing */
+    margin: auto;
+}
+  
+th, td {
+    border: 1px solid black; /* Black border for cells */
+    padding: 8px; /* Padding inside cells */
+    text-align: left; /* Align text to the left */
+}
+  
+th {
+    background-color: #f2f2f2; /* Light grey background for headers */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+}
+  
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra striping effect */
+}
+  
+tr:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+}
+  

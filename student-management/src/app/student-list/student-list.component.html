@@ -1,0 +1,22 @@
+<!-- src/app/student-list/student-list.component.html -->
+<table>
+  <thead>
+    <tr>
+      <th (click)="sortList('firstName')">First Name{{ sortColumn === 'firstName' ? (sortDirection === 'asc' ? '+' : '-') : '' }}</th>
+      <th (click)="sortList('lastName')">Last Name{{ sortColumn === 'lastName' ? (sortDirection === 'asc' ? '+' : '-') : '' }}</th>
+      <th (click)="sortList('personalNumber')">Personal Number{{ sortColumn === 'personalNumber' ? (sortDirection === 'asc' ? '+' : '-') : '' }}</th>
+      <th (click)="sortList('GPA')">GPA{{ sortColumn === 'GPA' ? (sortDirection === 'asc' ? '+' : '-') : '' }}</th>
+      <th (click)="sortList('status')">Status{{ sortColumn === 'status' ? (sortDirection === 'asc' ? '+' : '-') : '' }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{ student.firstName }}</td>
+      <td>{{ student.lastName }}</td>
+      <td>{{ student.personalNumber }}</td>
+      <td>{{ student.GPA || '-' }}</td>
+      <td>{{ student.status }}</td>
+    </tr>
+  </tbody>
+</table>
+<button id="shuffle" (click)="shuffleList()">Shuffle List</button>
